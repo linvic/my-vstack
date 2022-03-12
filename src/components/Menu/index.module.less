@@ -10,6 +10,7 @@
     display: flex;
     align-items: center;
     padding: 0 16px;
+    position: relative;
     .siderHeaderLogo {
       flex: 1;
       color: #07c160;
@@ -19,6 +20,7 @@
     }
     .siderTrigger {
       font-size: 18px;
+      display: none;
     }
   }
   .siderMenus {
@@ -63,8 +65,21 @@
   .sider {
     position: fixed;
     z-index: 3001;
-    transform: translateX(-106%);
+    transform: translateX(-100%);
     transition: transform .3s ease;
+    .siderHeader {
+      .siderTrigger {
+        display: block;
+      }
+    }
+    &.hide .siderTrigger {
+      position: absolute;
+      right: -30px;
+      top: 50%;
+      margin-top: -9px;
+      color: #FFF;
+      transform: rotate(180deg);
+    }
     &.show {
       transform: translateX(0);
       + .siderMask {

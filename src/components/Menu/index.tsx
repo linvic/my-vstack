@@ -1,84 +1,86 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from 'antd'
 import { MenuFoldOutlined, UpCircleOutlined, HomeOutlined, GlobalOutlined, GiftOutlined, FundProjectionScreenOutlined } from '@ant-design/icons'
 import styles from './index.module.less'
 
+const menuList = [
+  {
+    name: 'Home',
+    router: '',
+    icon: <HomeOutlined />,
+    isActive: true
+  },
+  {
+    name: 'Menu 2',
+    router: '',
+    icon: <GlobalOutlined />
+  },
+  {
+    name: 'Menu 3',
+    router: '',
+    icon: <GiftOutlined />
+  },
+  {
+    name: 'Menu 4',
+    router: '',
+    icon: <FundProjectionScreenOutlined />
+  },
+  {
+    name: 'Menu 2',
+    router: '',
+    icon: <GlobalOutlined />
+  },
+  {
+    name: 'Menu 3',
+    router: '',
+    icon: <GiftOutlined />
+  },
+  {
+    name: 'Menu 4',
+    router: '',
+    icon: <FundProjectionScreenOutlined />
+  },
+  {
+    name: 'Menu 2',
+    router: '',
+    icon: <GlobalOutlined />
+  },
+  {
+    name: 'Menu 3',
+    router: '',
+    icon: <GiftOutlined />
+  },
+  {
+    name: 'Menu 4',
+    router: '',
+    icon: <FundProjectionScreenOutlined />
+  },
+  {
+    name: 'Menu 2',
+    router: '',
+    icon: <GlobalOutlined />
+  },
+  {
+    name: 'Menu 3',
+    router: '',
+    icon: <GiftOutlined />
+  },
+  {
+    name: 'Menu 4',
+    router: '',
+    icon: <FundProjectionScreenOutlined />
+  }
+];
+
 const Footer: React.FC = () => {
-  const menuList = [
-    {
-      name: 'Home',
-      router: '',
-      icon: <HomeOutlined />,
-      isActive: true
-    },
-    {
-      name: 'Menu 2',
-      router: '',
-      icon: <GlobalOutlined />
-    },
-    {
-      name: 'Menu 3',
-      router: '',
-      icon: <GiftOutlined />
-    },
-    {
-      name: 'Menu 4',
-      router: '',
-      icon: <FundProjectionScreenOutlined />
-    },
-    {
-      name: 'Menu 2',
-      router: '',
-      icon: <GlobalOutlined />
-    },
-    {
-      name: 'Menu 3',
-      router: '',
-      icon: <GiftOutlined />
-    },
-    {
-      name: 'Menu 4',
-      router: '',
-      icon: <FundProjectionScreenOutlined />
-    },
-    {
-      name: 'Menu 2',
-      router: '',
-      icon: <GlobalOutlined />
-    },
-    {
-      name: 'Menu 3',
-      router: '',
-      icon: <GiftOutlined />
-    },
-    {
-      name: 'Menu 4',
-      router: '',
-      icon: <FundProjectionScreenOutlined />
-    },
-    {
-      name: 'Menu 2',
-      router: '',
-      icon: <GlobalOutlined />
-    },
-    {
-      name: 'Menu 3',
-      router: '',
-      icon: <GiftOutlined />
-    },
-    {
-      name: 'Menu 4',
-      router: '',
-      icon: <FundProjectionScreenOutlined />
-    }
-  ];
+  const [collapsed, setCollapsed] = useState(false)
   return <>
-    <aside className={`${styles.sider} ${styles.show}`}>
+    <aside className={`${styles.sider} ${!collapsed ? styles.show : styles.hide }`}>
       <div className={styles.siderHeader}>
         <div className={styles.siderHeaderLogo}>
           vstack
         </div>
-        {/* <MenuFoldOutlined className={styles.siderTrigger} /> */}
+        <MenuFoldOutlined className={styles.siderTrigger} onClick={()=> {setCollapsed(!collapsed)}} />
       </div>
       <ul className={styles.siderMenus}>
         {
