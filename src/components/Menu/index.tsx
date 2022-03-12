@@ -72,7 +72,7 @@ const menuList = [
   }
 ];
 
-const Footer: React.FC = () => {
+const Menu: React.FC = () => {
   const [collapsed, setCollapsed] = useState(false)
   return <>
     <aside className={`${styles.sider} ${!collapsed ? styles.show : styles.hide }`}>
@@ -103,4 +103,4 @@ const Footer: React.FC = () => {
   </>
 }
 
-export default Footer;
+export default Menu;
