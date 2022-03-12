@@ -12,6 +12,7 @@ import AppMenu from '@/components/Menu';
 import AppFooter from '@/components/footer';
 import BGIMG from '@/static/bg.jpg';
 import { Address } from './constants';
+import Market from './pages/marker'
 
 const { Header, Sider, Content, Footer } = Layout;
 
@@ -27,6 +28,11 @@ function App() {
         </Header>
         <Content id="app_content" style={{ background: `url(${BGIMG}) round #000` }}>
           {
+            // TODO: 没看路由逻辑，暂时把market页面放这预览
+            <Market></Market>
+          }
+          <div style={{'display': 'none'}}>
+          {
             account ? <AppRouter /> :
               <div className="d-f jc-c content-page"
                 style={{ flexDirection: "column" }}
@@ -36,6 +42,7 @@ function App() {
                 </Card>
               </div>
           }
+          </div>
 
         </Content>
         <Footer id="app_footer">
