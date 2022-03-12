@@ -1,0 +1,83 @@
+.sider {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 10px 0;
+  background: #FFF;
+  width: 200px;
+  .siderHeader {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    .siderHeaderLogo {
+      flex: 1;
+      color: #07c160;
+      font-size: 28px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .siderTrigger {
+      font-size: 18px;
+    }
+  }
+  .siderMenus {
+    flex: 1;
+    overflow-y: auto;
+    margin-top: 4px;
+    padding: 6px 16px 0;
+    list-style: none;
+    li {
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 110px;
+        color: #323233;
+        > i {
+          font-size: 40px;
+          line-height: 1;
+        }
+        > span {
+          font-size: 13px;
+          line-height: 24px;
+        }
+        &.active, &:hover {
+          color: #07c160;
+        }
+      }
+    }
+  }
+  .siderFooter {
+    text-align: center;
+    .languageChange {
+      cursor: pointer;
+      line-height: 50px;
+    }
+  }
+}
+
+// 适配
+@media screen and (max-width: 960px) {
+  .sider {
+    position: fixed;
+    z-index: 3001;
+    transform: translateX(-106%);
+    transition: transform .3s ease;
+    &.show {
+      transform: translateX(0);
+      + .siderMask {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, .68);
+        pointer-events: unset;
+        z-index: 3000;
+        transition: background-color .3s ease;
+      }
+    }
+  }
+}
