@@ -54,11 +54,11 @@ function App() {
 }
 
 ReactDOM.render(
-  <React.StrictMode>
+//   <React.StrictMode>
     <DAppProvider config={{}}>
       <Router basename='/dapp'>
         <App />
       </Router>
     </DAppProvider>
-  </React.StrictMode>
+//   </React.StrictMode>
   , document.querySelector('#root_app'));
