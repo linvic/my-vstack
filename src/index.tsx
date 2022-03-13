@@ -1,4 +1,4 @@
-import 'antd/dist/antd.css';
+import 'antd/dist/antd.less';
 import './style/main.less';
 import './i18n/i18n';
 import React from 'react';

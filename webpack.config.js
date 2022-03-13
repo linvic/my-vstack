@@ -81,12 +81,16 @@ module.exports = {
           {
             loader: 'less-loader',
             options: {
-              lessOptions: {
+              lessOptions: { // 如果使用less-loader@5，请移除 lessOptions 这一级直接配置选项。
+                modifyVars: {
+                  'primary-color': '#07c160',
+                  'link-color': '#07c160'
+                },
                 javascriptEnabled: true
               }
             }
-          }],
-
+          }
+        ]
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif|eot|ttf|otf)$/,
