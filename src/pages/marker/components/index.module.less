@@ -1,0 +1,61 @@
+.Tabs {
+  width: 95%;
+  font-size: 14px;
+  height: 50px;
+  text-align: center;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  overflow: auto;
+  border-radius: 20px;
+  border: 1px solid #d9d9d9;
+  margin: 20px 0;
+  .TableOne {
+    flex: 1;
+    min-width: unset;
+    position: relative;
+    transition: color 0.2s ease;
+    white-space: nowrap;
+    // min-width: 100px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 30px;
+    font-weight: 600;
+  }
+
+  .activeTab {
+    color: #fff;
+    background-color: #07c160;
+    z-index: 5;
+    border-radius: 20px;
+  }
+}
+
+.tabsConent {
+  .title {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 16px 0;
+    padding-left: 40px;
+  }
+  ul {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    li {
+      color: #a7acd0;
+      padding: 0 18px 0 18px;
+      border-radius: 30px;
+      height: 45px;
+      border: 1px solid #d9d9d9;
+      text-align: center;
+      line-height: 45px;
+      list-style-type: none;
+    }
+  }
+}
