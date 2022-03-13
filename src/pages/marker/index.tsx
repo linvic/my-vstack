@@ -196,7 +196,7 @@ const Market: React.FC = () => {
                 <Pagination defaultCurrent={1} total={50} />
             </div>
         </div>
-        <Modal title=""   width={750} footer={null} visible={isShow} onCancel={()=>{
+        <Modal title=""   width={750} footer={null} bodyStyle={{height: '750px', overflowY: 'auto'}} visible={isShow} onCancel={()=>{
              setIsShow(!isShow)
         }}>
         <Allnft></Allnft>

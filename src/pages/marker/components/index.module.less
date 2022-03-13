@@ -1,25 +1,40 @@
 .Tabs {
+  width: 95%;
+  font-size: 14px;
+  height: 50px;
+  text-align: center;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  overflow: auto;
+  border-radius: 20px;
+  border: 1px solid #d9d9d9;
+  margin: 20px 0;
+  .TableOne {
+    flex: 1;
+    min-width: unset;
+    position: relative;
+    transition: color 0.2s ease;
+    white-space: nowrap;
+    // min-width: 100px;
+    height: 100%;
     display: flex;
-    border-radius: 20px;
-  //   background-color: rgba(167, 172, 208, 0.35);
-    width: 200px;
-    border: 1px solid #d9d9d9;
-    .TableOne {
-      width: 100px;
-      height: 40px;
-      color: #090a19;
-      text-align: center;
-      line-height: 40px;
-      cursor: pointer;
-    }
-
-    .activeTab {
-      color: #fff;
-      background-color: #07c160;
-      z-index: 5;
-      border-radius: 20px;
-    }
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 30px;
+    font-weight: 600;
   }
+
+  .activeTab {
+    color: #fff;
+    background-color: #07c160;
+    z-index: 5;
+    border-radius: 20px;
+  }
+}
 
 .tabsConent {
   .title {
