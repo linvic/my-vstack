@@ -44,31 +44,6 @@ const menuList = [
     name: 'Menu 2',
     router: '',
     icon: <GlobalOutlined />
-  },
-  {
-    name: 'Menu 3',
-    router: '',
-    icon: <GiftOutlined />
-  },
-  {
-    name: 'Menu 4',
-    router: '',
-    icon: <FundProjectionScreenOutlined />
-  },
-  {
-    name: 'Menu 2',
-    router: '',
-    icon: <GlobalOutlined />
-  },
-  {
-    name: 'Menu 3',
-    router: '',
-    icon: <GiftOutlined />
-  },
-  {
-    name: 'Menu 4',
-    router: '',
-    icon: <FundProjectionScreenOutlined />
   }
 ];
 
