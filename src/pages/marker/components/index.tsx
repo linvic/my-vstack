@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './index.module.less'
-import {  } from 'antd';
+import { Tabs } from 'antd';
 import Item from 'antd/lib/list/Item';
 
 const tabsList = [
@@ -46,48 +46,45 @@ const tabsList = [
 ]
 
 
-const tabs = ['Auction', 'Market','33','44','666','Market','77']
+const tabs = ['Auction', 'Market', '33', '44', '666', 'Market']
+const { TabPane } = Tabs;
 const AllNtf: React.FC = () => {
     const [currentTab, setCurrentTab] = useState(0)
     return <>
         <div>
-            <div className={styles.Tabs}>
-                {
-                    tabs.map((item, i) => {
-                        return <div className={`${styles.TableOne} ${i === currentTab ? `${styles.activeTab}` : ""
-                            }`}
-                            key={i}
-                            onClick={() => {
-                                setCurrentTab(i);
-                            }}>{item}</div>
-                    })
-                }
+            <div>
+            <div className={styles.cardContainer}>
+                <Tabs type="card">
+                    {tabs.map((item, i) => {
+                        return <TabPane tab={item} key={i}>
+                           {
+                                    tabsList.map((itme, index) => {
+                                        return <div className={styles.tabsConent} key={index}>
+                                            <div className={styles.conentList}>
+                                                <div className={styles.title}>{itme.name}</div>
+                                                <ul>
+                                                    {
+                                                        itme.list.map((i, k) => {
+                                                            return <li key={k}>
+                                                                {i}
+                                                            </li>
+                                                        })
+                                                    }
+                                                </ul>
+                                            </div>
 
+                                        </div>
+
+                                    })
+                                }
+                        </TabPane>
+                    })}
+                </Tabs>
             </div>
 
-            {
-                tabsList.map((itme,index)=>{
-                    return   <div className={styles.tabsConent} key={index}>
-                    <div className={styles.conentList}>
-                        <div className={styles.title}>{itme.name}</div>
-                        <ul>
-                            {
-                              itme.list.map((i,k)=>{
-                                  return <li key={k}>
-                                      {i}
-                                  </li>
-                              })  
-                            }
-                        </ul>
-                    </div>
-                   
-                </div>
+                
+            </div>
 
-                })
-            }
-
-
-          
         </div>
     </>
 }

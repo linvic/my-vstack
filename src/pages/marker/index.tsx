@@ -128,7 +128,7 @@ const Market: React.FC = () => {
                         <Option value="0">Latest Sale</Option>
                         <Option value="1">Lucy</Option>
                         <Option value="2">Tom</Option>
-                    </Select>,
+                    </Select>
 
                     <Search placeholder=""   className={styles.search} style={{ height: 40 }}/>
                 </div>
