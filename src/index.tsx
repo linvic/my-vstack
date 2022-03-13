@@ -22,11 +22,11 @@ function App() {
   return (
     <Layout hasSider>
       <AppMenu></AppMenu>
-      <Layout style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', minHeight: '100vh' }}>
+      <Layout style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100vh' }}>
         <Header id="app_header">
           <AppHeader />
         </Header>
-        <Content id="app_content" style={{ background: `url(${BGIMG}) round #000` }}>
+        <Content id="app_content">
           {
             // TODO: 没看路由逻辑，暂时把market页面放这预览
             <Market></Market>
